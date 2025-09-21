@@ -9,7 +9,12 @@ const connectDb=require('./config/connectionDb')
 connectDb()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: "https://thunderous-salmiakki-e66a06.netlify.app",  
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(express.json())
 
 const PORT=process.env.PORT || 3000
