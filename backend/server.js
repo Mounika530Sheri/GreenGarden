@@ -10,8 +10,10 @@ connectDb()
 
 app.use(express.json())
 app.use(cors({
-  origin: "https://thunderous-salmiakki-e66a06.netlify.app" 
+  origin: "https://sensational-dango-826b3f.netlify.app",
+  credentials: true
 }));
+
 
 
 app.use(express.json())
